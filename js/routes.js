@@ -23,7 +23,7 @@ app.config(['$stateProvider', '$urlRouterProvider',"$locationProvider",
             .state('news', {
                 url: '/news',
                 templateUrl: '/testRokk3rlabs/html/news.html',
-                controller : 'MyCtrl'
+                controller : 'newController'
             })
             .state('error', {
                 url: '/errorScreen',
@@ -33,16 +33,6 @@ app.config(['$stateProvider', '$urlRouterProvider',"$locationProvider",
                 url: '/boardBrief',
                 templateUrl: '/testRokk3rlabs/html/boardBrief.html'
             });
-            // .state('subscriptions', {
-            //     url: '/subscriptions',
-            //     templateUrl: '/testRokk3rlabs/html/subscriptions.html',
-            //     controller : 'subsController',
-            //     resolve: {
-            //         subscriptionsData: function(userFactory){
-            //             return userFactory.getUserSubscriptions();
-            //         }
-            //     }
-            // });
     }
 
 ]);

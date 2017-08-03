@@ -135,12 +135,20 @@ app.service('globalService', [ '$rootScope', '$cookieStore' ,
         var categories = [];
         var data = [];
         var pieData = [];
+        var lineData = [];
         for (var i = 0; i < this.activityData.length; i++) {
             categories.push(this.activityData[i].zoneId);
             data.push(this.activityData[i].data.count);
             pieData.push({
                 name: this.activityData[i].zoneId,
                 y: this.activityData[i].data.speed
+            });
+            lineData.push({
+                name: this.activityData[i].zoneId,
+                data: {
+                x: this.activityData[i].data.time * 1000,
+                y: this.activityData[i].data.speed
+                }
             })
         }
 
